@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  analyzer:
+    build: .
+    volumes:
+      - ./data:/app/data
+    environment:
+      - DATA_PATH=/app/data/alert_project_data.csv
+      - CHUNK_SIZE=50000
